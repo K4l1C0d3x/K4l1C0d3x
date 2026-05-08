@@ -1,126 +1,140 @@
-<!-- MasterHead -->
-<a href="https://github.com/CODEKJ777/CODEKJ777/blob/main/GIF.gif">
-  <img src="https://github.com/CODEKJ777/CODEKJ777/blob/main/GIF.gif" alt="MasterHead GIF" style="width:auto; height:auto" />
-</a>
+<img src="gifs/git%201.gif" style="max-width:100%;height:auto;display:block;margin:0 auto;" alt="banner gif"/>
 
-<!-- Blue GIF Separator Bar -->
-<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
-
-<!-- Typing Animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&pause=1000&width=435&lines=Hey%2C+I'm+Kalidas+KJ;Welcome+to+my+profile!)](https://git.io/typing-svg)
-
-
-<!-- About Me -->
-<img src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width = 35>&nbsp;***About me***
-<p>
-<ul>
-  <li>I’m a <b>Game Developer and Software Developer</b> passionate about building interactive and creative experiences.</li>
-  <li>I work primarily with <b>Unreal Engine, Unity, Python, and C++</b> to design both games and software.</li>
-  <li><b>Creating projects</b> using Unreal Engine, Unity, Python, and C++ while exploring sound design and music production.</li>
-  <li><b>Knowledgeable in</b> ethical hacking, red teaming, computer networking, and cybersecurity.</li>
-  <li><b>Open to collaborating</b> on games, interactive software, open-source projects, or any creative and fun endeavor.</li>
-  <li><b>Curious and approachable</b> — always happy to answer questions and share knowledge.</li>
-  <li><b>Portfolio: </b> <a href="https://portfolio-mocha-eight-35.vercel.app">Portfolio
-  </a> <br> </li>
-  <li><b>Interests:</b> gaming, music, fitness, and magic.</li>
-</ul>
+<p align="center">
+  <a href="https://www.linkedin.com/in/kalidas-kj-7b84672a2" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:kalidaskj004@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-000000?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://open.spotify.com/user/kalidaskj004" target="_blank">
+    <img src="https://img.shields.io/badge/Spotify-000000?style=for-the-badge&logo=spotify&logoColor=white" />
+  </a>
 </p>
 
-<br/>
 
-<!-- Connect with Me -->
-<h3 align="center">🌐 Connect with Me:</h3>
-
-<div align="center">
-  <a href="mailto:kalidaskj004@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/in/kalidas-kj-7b84672a2" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-  <a href="https://open.spotify.com/user/kalidaskj004" target="_blank">
-    <img src="https://img.shields.io/badge/Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" />
-  </a>
-</div>
-
-
-<br/>
-
-<!-- Skills Section -->
-<img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30">&nbsp; ***Skills***
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-
-##### Languages:
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)&nbsp;
-![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)&nbsp;
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)&nbsp;
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)&nbsp;
-![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white)&nbsp;
-![Shell Script](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)&nbsp;
-![PowerShell](https://img.shields.io/badge/PowerShell-012456?style=for-the-badge&logo=powershell&logoColor=white)&nbsp;
-
-##### Frontend:
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)&nbsp;
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)&nbsp;
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)&nbsp;
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)&nbsp;
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)&nbsp;
-
-##### Backend:
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)&nbsp;
-![Express.js](https://img.shields.io/badge/Express.js-404d59?style=for-the-badge&logo=express&logoColor=white)&nbsp;
-
-##### Databases:
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)&nbsp;
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)&nbsp;
-![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=for-the-badge&logo=amazondynamodb&logoColor=white)&nbsp;
-
-##### DevOps & Cloud / Hosting:
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)&nbsp;
-![Terraform](https://img.shields.io/badge/Terraform-5E5E5E?style=for-the-badge&logo=terraform&logoColor=white)&nbsp;
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)&nbsp;
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)&nbsp;
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)&nbsp;
-![Docker](https://img.shields.io/badge/Docker-0db7ed?style=for-the-badge&logo=docker&logoColor=white)&nbsp;
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)&nbsp;
-![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)&nbsp;
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)&nbsp;
-
-##### IDEs & Tools:
-![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)&nbsp;
-![PyCharm](https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=green)&nbsp;
-![Android Studio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)&nbsp;
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)&nbsp;
-
-##### OS / Platforms:
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=microsoft&logoColor=white)&nbsp;
-![WSL](https://img.shields.io/badge/WSL-4D4D4D?style=for-the-badge&logo=linux&logoColor=white)&nbsp;
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)&nbsp;
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)&nbsp;
-![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)&nbsp;
-
-##### Testing:
-![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)&nbsp;
-![Supertest](https://img.shields.io/badge/Supertest-FF5F00?style=for-the-badge&logo=supertest&logoColor=white)&nbsp;
-![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)&nbsp;
-![Testing Library](https://img.shields.io/badge/Testing_Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)&nbsp;
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)&nbsp;
-
-##### Other Stuff / Tools & Security:
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)&nbsp;
-![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)&nbsp;
 <br>
 
-<!-- Monkeytype Stats -->
-<h3 align="center">Typing Stats</h3>
-<div align="center">
-  <a href="https://monkeytype.com/profile/Kalidaskj" target="_blank">Monkeytype Profile</a>
+<h2 align="center"> <img src="/imgs/title1.png" width="25"/> <em>About  me </em></h2>
+
+<img src="gifs/code.gif" width="250" align="right" style="margin-left: 20px;" />
+<br/>
+
+<p>
+  Hello There! <em><b>I'm Kalidas</b></em>, a Game Developer and Software Developer passionate about building interactive and creative experiences. I primarily work with Unreal Engine, Unity, Python, and C++ to develop games and software.<br/><br/>
+  I'm also exploring sound design and music production, with knowledge in cybersecurity.<br/><br/>
+  Open to collaborating on games, software, open-source, and creative projects. Always learning, building, and sharing knowledge.<br/><br/>
+  <strong>Interests:</strong> games, music, fitness, and magic.
+</p>
+
+
+<br/>
+
+<p align="center">
+  <a href="https://portfolio-mocha-eight-35.vercel.app" target="_blank" style="color:#0366d6; text-decoration:none; font-style:italic;">
+    <img src="imgs/icon1.png" width="22" style="vertical-align:middle; margin-right:8px;" alt="Portfolio icon" />
+    <span style="vertical-align:middle; color:inherit;">Portfolio</span>
+  </a>
+</p>
+
+<br/>
+<br/>
+<h2 align="center"> <img src="/imgs/title.png" width="25"/> <em> Typing Stats </em> </h2>
+
+<p align="center">
+  <a href="https://monkeytype.com/profile/Kalidaskj" target="_blank">
+    <img src="https://img.shields.io/badge/Monkeytype-000000?style=for-the-badge&logo=monkeytype&logoColor=white" />
+  </a>
+</p>
+
+<br/>
+<br/>
+<h2 align="center"> <img src="/imgs/title2.png" width="25"/> <em> Technologies </em> </h2>
+
+<h3 align="center"><em>Languages</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-000000?style=for-the-badge&logo=java&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%2B%2B-000000?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kotlin-000000?style=for-the-badge&logo=kotlin&logoColor=white" />
+  <img src="https://img.shields.io/badge/Shell_Script-000000?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/PowerShell-000000?style=for-the-badge&logo=powershell&logoColor=white" />
+</p>
+
+<h3 align="center"><em>Frontend</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-000000?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+</p>
+
+<h3 align="center"><em>Backend</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+</p>
+
+<h3 align="center"><em>Databases</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-000000?style=for-the-badge&logo=mongodb&logoColor=white" />
+</p>
+
+<h3 align="center"><em>DevOps & Cloud</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/AWS-000000?style=for-the-badge&logo=amazon-aws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-000000?style=for-the-badge&logo=terraform&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-000000?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white" />
+  <img src="https://img.shields.io/badge/Netlify-000000?style=for-the-badge&logo=netlify&logoColor=white" />
+</p>
+
+<h3 align="center"><em>Tools & IDEs</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/VSCode-000000?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android_Studio-000000?style=for-the-badge&logo=android-studio&logoColor=white" />
+  <img src="https://img.shields.io/badge/Figma-000000?style=for-the-badge&logo=figma&logoColor=white" />
+</p>
+
+<h3 align="center"><em>Operating Systems</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/Windows-000000?style=for-the-badge&logo=windows&logoColor=white" />
+  <img src="https://img.shields.io/badge/WSL-000000?style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kali_Linux-000000?style=for-the-badge&logo=kali-linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Debian-000000?style=for-the-badge&logo=debian&logoColor=white" />
+</p>
+
+<h3 align="center"><em>Testing</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/Jest-000000?style=for-the-badge&logo=jest&logoColor=white" />
+  <img src="https://img.shields.io/badge/Supertest-000000?style=for-the-badge&logo=npm&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vitest-000000?style=for-the-badge&logo=vitest&logoColor=white" />
+  <img src="https://img.shields.io/badge/Testing_Library-000000?style=for-the-badge&logo=testing-library&logoColor=white" />
+  <img src="https://img.shields.io/badge/Playwright-000000?style=for-the-badge&logo=playwright&logoColor=white" />
+</p>
+
+<h3 align="center"><em>Other</em></h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" />
+</p>
+
+<br/>
+
+<h2 align="center""> <img src="/imgs/title3.png" width="25"/> <em> Statistics </em> </h2>
+<div align = "center"> 
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=CODEKJ777&bg_color=000000&color=ffffff&line=ffffff&point=ffffff&area=true&hide_border=false" width="100%"/>
+
 </div>
 
 
-<br/><br/><br/>
-<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
-<p align="center">
-  ⚠️ This README is uniquely designed by <strong>Kalidas KJ</strong>.
-</p>
 
