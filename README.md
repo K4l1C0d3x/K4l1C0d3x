@@ -33,9 +33,14 @@
 <br/>
 
 <p align="center">
-  <a href="https://portfolio-mocha-eight-35.vercel.app" target="_blank" style="color:#0366d6; text-decoration:none; font-style:italic;">
-    <img src="imgs/icon1.png" width="22" style="vertical-align:middle; margin-right:8px;" alt="Portfolio icon" />
-    <span style="vertical-align:middle; color:inherit;">Portfolio</span>
+  <a href="https://portfolio-mocha-eight-35.vercel.app" target="_blank" style="text-decoration:none;">
+    <img 
+      src="imgs/icon1.png" 
+      width="22" 
+      style="vertical-align:middle;" 
+      alt="Portfolio icon"
+    />
+    <span style="vertical-align:middle;">Portfolio</span>
   </a>
 </p>
 
