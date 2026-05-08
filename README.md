@@ -33,10 +33,10 @@
 <br/>
 
 <p align="center">
-  <a href="https://portfolio-mocha-eight-35.vercel.app" target="_blank" rel="noopener noreferrer">
-    <img src="imgs/icon1.png" width="22" alt="Portfolio icon" align="center" />
-    Portfolio
-  </a>
+<a href="[https://portfolio-mocha-eight-35.vercel.app](https://portfolio-mocha-eight-35.vercel.app/)" target="_blank">
+<img src="imgs/icon1.png" width="22" alt="Portfolio icon" align="center" />
+Portfolio
+</a>
 </p>
 
 <br/>
