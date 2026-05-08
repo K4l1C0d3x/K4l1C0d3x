@@ -1,4 +1,6 @@
-<img src="gifs/git%201.gif" style="max-width:100%;height:auto;display:block;margin:0 auto;" alt="banner gif"/>
+<p align="center">
+  <img src="gifs/git%201.gif" width="100%" />
+</p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/kalidas-kj-7b84672a2" target="_blank">
