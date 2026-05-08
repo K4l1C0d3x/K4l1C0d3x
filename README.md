@@ -33,14 +33,17 @@
 <br/>
 
 <p align="center">
-  <a href="https://portfolio-mocha-eight-35.vercel.app" target="_blank" style="text-decoration:none;">
+  <a 
+    href="https://portfolio-mocha-eight-35.vercel.app" 
+    target="_blank"
+    style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;"
+  >
     <img 
       src="imgs/icon1.png" 
       width="22" 
-      style="vertical-align:middle;" 
       alt="Portfolio icon"
     />
-    <span style="vertical-align:middle;">Portfolio</span>
+    <span>Portfolio</span>
   </a>
 </p>
 
