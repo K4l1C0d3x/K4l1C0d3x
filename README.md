@@ -44,7 +44,7 @@
 <h2 align="center"> <img src="imgs/typing.png" width="18"/> <em> Typing Stats </em> </h2>
 
 <p align="center">
-  <a href="https://monkeytype.com/profile/Kalidaskj"  />monkeytype
+  <a href="https://monkeytype.com/profile/Kalidaskj"  /> monkeytype
   </a>
 </p>
 
