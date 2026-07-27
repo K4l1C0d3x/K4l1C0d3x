@@ -133,7 +133,7 @@
 
 <h2 align="center""> <img src="imgs/icons8-graph-100.png" width="18"/> <em> Statistics </em> </h2>
 <div align = "center"> 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=CODEKJ777&bg_color=000000&color=ffffff&line=ffffff&point=ffffff&area=true&hide_border=false" width="100%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=K4l1C0d3x&bg_color=000000&color=ffffff&line=ffffff&point=ffffff&area=true&hide_border=false" width="100%"/>
 
 </div>
 
