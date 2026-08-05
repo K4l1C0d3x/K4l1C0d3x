@@ -2,7 +2,7 @@
   <img src="gifs/git%201.gif" width="100%" />
 </p>
 
-<p>
+<p align="center">
   <a href="https://www.linkedin.com/in/kalidas-kj-7b84672a2" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
