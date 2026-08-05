@@ -30,12 +30,12 @@
 
 <br/>
 
-<h2>
+<p>
   <a href="https://portfolio-mocha-eight-35.vercel.app/" target="_blank">
     <img src="imgs/icon1.png" width="22" alt="Portfolio icon" align="center" />
-    <em>Portfolio</em>
+    Portfolio
   </a>
-</h2>
+</p>
 
 <br/>
 <br/>
