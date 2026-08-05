@@ -2,7 +2,7 @@
   <img src="gifs/git%201.gif" width="100%" />
 </p>
 
-<p align="center">
+<p>
   <a href="https://www.linkedin.com/in/kalidas-kj-7b84672a2" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
@@ -32,7 +32,7 @@
 
 <br/>
 
-<p align="center">
+<p>
   <a href="https://portfolio-mocha-eight-35.vercel.app/" target="_blank">
     <img src="imgs/icon1.png" width="22" alt="Portfolio icon" align="center" />
     Portfolio
@@ -43,7 +43,7 @@
 <br/>
 <h2> <img src="imgs/typing.png" width="18"/> <em> Typing Stats </em> </h2>
 
-<p align="center">
+<p>
   <a href="https://monkeytype.com/profile/Kalidaskj"  /> monkeytype
   </a>
 </p>
@@ -53,7 +53,7 @@
 <h2> <img src="imgs/techno.png" width="18"/> <em> Technologies </em> </h2>
 
 <h3><em>Languages</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Java-000000?style=for-the-badge&logo=java&logoColor=white" />
@@ -64,7 +64,7 @@
 </p>
 
 <h3><em>Frontend</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/HTML-000000?style=for-the-badge&logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/CSS-000000?style=for-the-badge&logo=css3&logoColor=white" />
   <img src="https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=white" />
@@ -73,19 +73,19 @@
 </p>
 
 <h3><em>Backend</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=nodedotjs&logoColor=white" />
   <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
 </p>
 
 <h3><em>Databases</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=white" />
   <img src="https://img.shields.io/badge/MongoDB-000000?style=for-the-badge&logo=mongodb&logoColor=white" />
 </p>
 
 <h3><em>DevOps & Cloud</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/AWS-000000?style=for-the-badge&logo=amazon-aws&logoColor=white" />
   <img src="https://img.shields.io/badge/Terraform-000000?style=for-the-badge&logo=terraform&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-000000?style=for-the-badge&logo=git&logoColor=white" />
@@ -99,7 +99,7 @@
 </p>
 
 <h3><em>Tools & IDEs</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/VSCode-000000?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
   <img src="https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white" />
   <img src="https://img.shields.io/badge/Android_Studio-000000?style=for-the-badge&logo=android-studio&logoColor=white" />
@@ -107,7 +107,7 @@
 </p>
 
 <h3><em>Operating Systems</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/Windows-000000?style=for-the-badge&logo=windows&logoColor=white" />
   <img src="https://img.shields.io/badge/WSL-000000?style=for-the-badge&logo=linux&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=white" />
@@ -116,7 +116,7 @@
 </p>
 
 <h3><em>Testing</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/Jest-000000?style=for-the-badge&logo=jest&logoColor=white" />
   <img src="https://img.shields.io/badge/Supertest-000000?style=for-the-badge&logo=npm&logoColor=white" />
   <img src="https://img.shields.io/badge/Vitest-000000?style=for-the-badge&logo=vitest&logoColor=white" />
@@ -125,7 +125,7 @@
 </p>
 
 <h3><em>Other</em></h3>
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" />
 </p>
 
