@@ -131,7 +131,7 @@
 
 <br/>
 
-## 📈 Contribution Graph
+<h2> <img src="imgs/icons8-graph-100.png" width="18"/> <em> Contribution Graph </em> </h2>
 
 <p align="center">
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=K4l1C0d3x&theme=tokyo-night&hide_border=true&line=00E5FF&point=FFFFFF&area=true&area_color=00E5FF&color=00E5FF&title_color=00E5FF&bg_color=1A1B27"/>
