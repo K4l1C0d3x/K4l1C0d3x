@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/wordmark?username=asamassekou10&theme=aurora&label=KALIDAS" width="100%" alt="Animated 3D wordmark for KALIDAS" />
+  <img src="gifs/Kalidasgif.gif" width="100%" alt="Animated KALIDAS" />
 </p>
 
 <p align="center">
