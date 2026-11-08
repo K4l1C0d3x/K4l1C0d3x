@@ -109,7 +109,9 @@ async function main() {
 
   const outFile = path.join(outDir, `${username}-monkeytype-readme.svg`);
   fs.writeFileSync(outFile, svg, 'utf8');
-  console.log(`Saved SVG to ${outFile}`);
+  const pbFile = path.join(outDir, `${username}-monkeytype-pb.svg`);
+  fs.writeFileSync(pbFile, svg, 'utf8');
+  console.log(`Saved SVG to ${outFile} and ${pbFile}`);
 }
 
 function generate3CardSvg({ name, streak, avatarBase64, timePBs, wordsPBs, theme }) {
