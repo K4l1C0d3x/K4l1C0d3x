@@ -16,10 +16,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Download Monkeytype SVG
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+
+      - name: Generate 3-Card Personal Bests SVG
         run: |
-          mkdir -p monkeytype-readme-svg
-          curl -s "https://monkeytype-readme-stats.vercel.app/api/monkeytype?username=Kalidaskj&theme=dracula" -o monkeytype-readme-svg/Kalidaskj-monkeytype-readme.svg
+          node .github/scripts/generate-monkeytype.js Kalidaskj botanical monkeytype-readme-svg
 
       - name: Push to monkeytype-readme branch
         uses: crazy-max/ghaction-github-pages@v4
