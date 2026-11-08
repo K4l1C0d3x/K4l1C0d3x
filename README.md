@@ -43,7 +43,7 @@
 
 <p>
   <a href="https://monkeytype.com/profile/Kalidaskj" target="_blank">
-    <img src="https://raw.githubusercontent.com/K4l1C0d3x/K4l1C0d3x/monkeytype-readme/Kalidaskj-monkeytype-readme.svg" alt="Monkeytype Stats" />
+    <img src="https://raw.githubusercontent.com/K4l1C0d3x/K4l1C0d3x/monkeytype-readme/Kalidaskj-monkeytype-readme.svg?v=2" alt="Monkeytype Stats" />
   </a>
 </p>
 
