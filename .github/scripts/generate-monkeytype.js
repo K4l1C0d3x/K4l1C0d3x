@@ -30,8 +30,8 @@ function generateStatsBox(items, title, x, y, width = 250, height = 90) {
 
     <text x="${x + 12}" y="${y + 19}"
           fill="#9299ad"
-          font-size="9"
-          font-weight="bold">${title}</text>
+          font-size="10"
+          font-weight="800">${title}</text>
 
     ${items
       .map((item, i) => {
@@ -41,19 +41,20 @@ function generateStatsBox(items, title, x, y, width = 250, height = 90) {
         <text x="${cx}" y="${y + 39}"
               text-anchor="middle"
               fill="#9299ad"
-              font-size="9">${item.label}</text>
+              font-size="10"
+              font-weight="700">${item.label}</text>
 
         <text x="${cx}" y="${y + 63}"
               text-anchor="middle"
               fill="#eeeeee"
-              font-size="16"
-              font-weight="bold">${item.wpm}</text>
+              font-size="17"
+              font-weight="900">${item.wpm}</text>
 
         <text x="${cx}" y="${y + 80}"
               text-anchor="middle"
               fill="#c39bff"
-              font-size="9"
-              font-weight="bold">${item.accuracy}%</text>
+              font-size="10"
+              font-weight="800">${item.accuracy}%</text>
       `;
       })
       .join('')}
@@ -71,7 +72,8 @@ function createExpandedSVG(stats) {
 
   <style>
     text {
-      font-family: 'Montserrat', Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Montserrat', Helvetica, Arial, sans-serif;
+      font-weight: 700;
     }
     .rank-circle-bg { stroke: #303342; }
     .rank-circle { stroke: #c39bff; stroke-dasharray: 251.3; stroke-dashoffset: 91.6; stroke-linecap: round; }
@@ -87,7 +89,8 @@ function createExpandedSVG(stats) {
   <!-- HEADER -->
   <text x="26" y="34"
         fill="#a78bfa"
-        font-size="14">⌨ monkeytype</text>
+        font-size="14"
+        font-weight="800">⌨ monkeytype</text>
 
   <path d="M26 43 H${width - 26}"
         stroke="#414354"/>
@@ -96,34 +99,37 @@ function createExpandedSVG(stats) {
   <!-- USERNAME -->
   <text x="26" y="86"
         fill="#c39bff"
-        font-size="25"
-        font-weight="bold">${escapeXML(USERNAME)}</text>
+        font-size="26"
+        font-weight="900">${escapeXML(USERNAME)}</text>
 
   <!-- TYPING TIME -->
   <text x="26" y="126"
         fill="#9299ad"
-        font-size="9"
+        font-size="10"
+        font-weight="700"
         letter-spacing="1">TIME TYPING</text>
 
   <text x="26" y="151"
         fill="#eeeeee"
-        font-size="16"
-        font-weight="bold">${escapeXML(stats.timeTyping)}</text>
+        font-size="17"
+        font-weight="800">${escapeXML(stats.timeTyping)}</text>
 
   <!-- TESTS COMPLETED -->
   <text x="26" y="196"
         fill="#9299ad"
-        font-size="9"
+        font-size="10"
+        font-weight="700"
         letter-spacing="1">TESTS COMPLETED</text>
 
   <text x="26" y="221"
         fill="#eeeeee"
-        font-size="16"
-        font-weight="bold">${stats.completedTests.toLocaleString()}</text>
+        font-size="17"
+        font-weight="800">${stats.completedTests.toLocaleString()}</text>
 
   <text x="26" y="247"
         fill="#9299ad"
-        font-size="9">STARTED: <tspan fill="#c39bff" font-weight="bold">${stats.startedTests.toLocaleString()}</tspan>  •  XP: <tspan fill="#c39bff" font-weight="bold">${stats.xp.toLocaleString()}</tspan></text>
+        font-size="9.5"
+        font-weight="700">STARTED: <tspan fill="#c39bff" font-weight="900">${stats.startedTests.toLocaleString()}</tspan>  •  XP: <tspan fill="#c39bff" font-weight="900">${stats.xp.toLocaleString()}</tspan></text>
 
   <!-- DIVIDER 1 -->
   <path d="M255 54 V254"
@@ -133,42 +139,46 @@ function createExpandedSVG(stats) {
   <!-- MAIN TIME STAT (15s) -->
   <text x="278" y="68"
         fill="#9299ad"
-        font-size="9"
+        font-size="10"
+        font-weight="700"
         letter-spacing="1">15 SECONDS</text>
 
   <text x="278" y="112"
         fill="#c39bff"
-        font-size="34"
-        font-weight="bold">${stats.main.time.wpm}</text>
+        font-size="36"
+        font-weight="900">${stats.main.time.wpm}</text>
 
-  <text x="278" y="126"
+  <text x="278" y="127"
         fill="#9299ad"
-        font-size="9">WPM</text>
+        font-size="10"
+        font-weight="800">WPM</text>
 
   <text x="278" y="151"
         fill="#eeeeee"
-        font-size="15"
-        font-weight="bold">${stats.main.time.accuracy}%</text>
+        font-size="16"
+        font-weight="800">${stats.main.time.accuracy}%</text>
 
   <!-- MAIN WORD STAT (10w) -->
   <text x="410" y="68"
         fill="#9299ad"
-        font-size="9"
+        font-size="10"
+        font-weight="700"
         letter-spacing="1">10 WORDS</text>
 
   <text x="410" y="112"
         fill="#c39bff"
-        font-size="34"
-        font-weight="bold">${stats.main.words.wpm}</text>
+        font-size="36"
+        font-weight="900">${stats.main.words.wpm}</text>
 
-  <text x="410" y="126"
+  <text x="410" y="127"
         fill="#9299ad"
-        font-size="9">WPM</text>
+        font-size="10"
+        font-weight="800">WPM</text>
 
   <text x="410" y="151"
         fill="#eeeeee"
-        font-size="15"
-        font-weight="bold">${stats.main.words.accuracy}%</text>
+        font-size="16"
+        font-weight="800">${stats.main.words.accuracy}%</text>
 
   <!-- TIME MODE BOX -->
   ${generateStatsBox(stats.timeMode, 'TIME MODE', 270, 165, 260, 92)}
@@ -183,14 +193,14 @@ function createExpandedSVG(stats) {
     <!-- Rank Ring -->
     <circle class="rank-circle-bg" cx="42" cy="45" r="38" fill="none" stroke-width="6" />
     <circle class="rank-circle" cx="42" cy="45" r="38" fill="none" stroke-width="6" transform="rotate(-90 42 45)" />
-    <text x="42" y="42" class="circle-subtitle" fill="#9299ad" font-size="10" font-weight="bold" text-anchor="middle">Top</text>
-    <text x="42" y="56" class="circle-title" fill="#c39bff" font-size="13" font-weight="bold" text-anchor="middle">36.5%</text>
+    <text x="42" y="42" class="circle-subtitle" fill="#9299ad" font-size="11" font-weight="800" text-anchor="middle">Top</text>
+    <text x="42" y="58" class="circle-title" fill="#c39bff" font-size="14" font-weight="900" text-anchor="middle">36.5%</text>
 
     <!-- Leaderboard Ranks Text -->
-    <text x="96" y="24" fill="#9299ad" font-size="9" letter-spacing="1">GLOBAL RANKING</text>
-    <text x="96" y="46" fill="#9299ad" font-size="10">15s Rank: <tspan fill="#eeeeee" font-weight="bold">${escapeXML(stats.rank15)}</tspan></text>
-    <text x="96" y="68" fill="#9299ad" font-size="10">60s Rank: <tspan fill="#eeeeee" font-weight="bold">${escapeXML(stats.rank60)}</tspan></text>
-    <text x="96" y="88" fill="#c39bff" font-size="10" font-weight="bold">${escapeXML(stats.keyboard || 'Monkeytype')}</text>
+    <text x="96" y="24" fill="#9299ad" font-size="10" font-weight="800" letter-spacing="1">GLOBAL RANKING</text>
+    <text x="96" y="46" fill="#9299ad" font-size="11" font-weight="700">15s Rank: <tspan fill="#eeeeee" font-weight="800">${escapeXML(stats.rank15)}</tspan></text>
+    <text x="96" y="68" fill="#9299ad" font-size="11" font-weight="700">60s Rank: <tspan fill="#eeeeee" font-weight="800">${escapeXML(stats.rank60)}</tspan></text>
+    <text x="96" y="88" fill="#c39bff" font-size="11" font-weight="800">${escapeXML(stats.keyboard || 'Monkeytype')}</text>
   </g>
 
   <!-- WORDS MODE BOX -->
