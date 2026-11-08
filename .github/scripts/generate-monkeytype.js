@@ -1,219 +1,248 @@
 const fs = require('fs');
 const path = require('path');
 
-const THEMES = {
-  botanical: {
-    cardBg: '#72908d',
-    textColor: '#eaf1f3',
-    subColor: '#b4c7c4',
-    accentColor: '#eaf1f3',
-    badgeBg: '#e74c3c',
-    badgeText: '#ffffff'
-  },
-  dracula: {
-    cardBg: '#20222c',
-    textColor: '#f8f8f2',
-    subColor: '#6272a4',
-    accentColor: '#bd93f9',
-    badgeBg: '#ff5555',
-    badgeText: '#ffffff'
-  },
-  serika_dark: {
-    cardBg: '#2c2e31',
-    textColor: '#d1d0c5',
-    subColor: '#646669',
-    accentColor: '#e2b714',
-    badgeBg: '#e2b714',
-    badgeText: '#000000'
-  },
-  tokyo_night: {
-    cardBg: '#1f2335',
-    textColor: '#c0caf5',
-    subColor: '#565f89',
-    accentColor: '#7aa2f7',
-    badgeBg: '#f7768e',
-    badgeText: '#ffffff'
-  }
-};
+const USERNAME = 'Kalidaskj';
+
+function formatSecondsToHMS(totalSeconds) {
+  const sec = Math.floor(totalSeconds || 0);
+  const hours = Math.floor(sec / 3600);
+  const minutes = Math.floor((sec % 3600) / 60);
+  const seconds = sec % 60;
+  return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+function escapeXML(value) {
+  return String(value).replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&apos;'
+  })[char]);
+}
+
+function generateStats(items, title, x) {
+  return `
+    <rect x="${x}" y="175"
+          width="240" height="90"
+          rx="10" fill="#303342"/>
+
+    <text x="${x + 12}" y="194"
+          fill="#9299ad"
+          font-size="9"
+          font-weight="bold">${title}</text>
+
+    ${items
+      .map((item, i) => {
+        const cx = x + 30 + i * 58;
+
+        return `
+        <text x="${cx}" y="214"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">${item.label}</text>
+
+        <text x="${cx}" y="238"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">${item.wpm}</text>
+
+        <text x="${cx}" y="255"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">${item.accuracy}%</text>
+      `;
+      })
+      .join('')}
+  `;
+}
+
+function createSVG(stats) {
+  return `<svg xmlns="http://www.w3.org/2000/svg"
+     width="530"
+     height="280"
+     viewBox="0 0 530 280">
+
+  <style>
+    text {
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+  </style>
+
+  <!-- MAIN CARD -->
+  <rect x="8" y="8"
+        width="514" height="264"
+        rx="14"
+        fill="#262833"
+        stroke="#414354"/>
+
+  <!-- HEADER -->
+  <text x="26" y="34"
+        fill="#a78bfa"
+        font-size="14">⌨ monkeytype</text>
+
+  <path d="M26 43 H504"
+        stroke="#414354"/>
+
+  <!-- USERNAME -->
+  <text x="26" y="90"
+        fill="#c39bff"
+        font-size="25"
+        font-weight="bold">${escapeXML(USERNAME)}</text>
+
+  <!-- TYPING TIME -->
+  <text x="26" y="134"
+        fill="#9299ad"
+        font-size="9"
+        letter-spacing="1">TIME TYPING</text>
+
+  <text x="26" y="159"
+        fill="#eeeeee"
+        font-size="16">${escapeXML(stats.timeTyping)}</text>
+
+  <!-- DIVIDER -->
+  <path d="M270 54 V157"
+        stroke="#414354"/>
+
+  <!-- MAIN TIME STAT -->
+  <text x="294" y="66"
+        fill="#9299ad"
+        font-size="9"
+        letter-spacing="1">15 SECONDS</text>
+
+  <text x="294" y="110"
+        fill="#c39bff"
+        font-size="34"
+        font-weight="bold">${stats.main.time.wpm}</text>
+
+  <text x="294" y="124"
+        fill="#9299ad"
+        font-size="9">WPM</text>
+
+  <text x="294" y="149"
+        fill="#eeeeee"
+        font-size="15"
+        font-weight="bold">${stats.main.time.accuracy}%</text>
+
+  <!-- MAIN WORD STAT -->
+  <text x="405" y="66"
+        fill="#9299ad"
+        font-size="9"
+        letter-spacing="1">10 WORDS</text>
+
+  <text x="405" y="110"
+        fill="#c39bff"
+        font-size="34"
+        font-weight="bold">${stats.main.words.wpm}</text>
+
+  <text x="405" y="124"
+        fill="#9299ad"
+        font-size="9">WPM</text>
+
+  <text x="405" y="149"
+        fill="#eeeeee"
+        font-size="15"
+        font-weight="bold">${stats.main.words.accuracy}%</text>
+
+  <!-- TIME MODE -->
+  ${generateStats(stats.timeMode, 'TIME MODE', 20)}
+
+  <!-- WORDS MODE -->
+  ${generateStats(stats.wordsMode, 'WORDS MODE', 270)}
+
+</svg>`;
+}
 
 async function main() {
-  const username = process.argv[2] || 'Kalidaskj';
-  const themeName = process.argv[3] || 'botanical';
-  const theme = THEMES[themeName] || THEMES.botanical;
-
-  console.log(`Fetching Monkeytype stats for ${username}...`);
-  const profileRes = await fetch(`https://api.monkeytype.com/users/${username}/profile`);
-  if (!profileRes.ok) {
-    throw new Error(`Failed to fetch profile: ${profileRes.statusText}`);
-  }
-  const { data: userData } = await profileRes.json();
-
-  // Avatar base64
-  let avatarBase64 = '';
-  try {
-    const avatarRes = await fetch(`https://avatars.githubusercontent.com/u/162964939?v=4`);
-    if (avatarRes.ok) {
-      const buffer = await avatarRes.arrayBuffer();
-      avatarBase64 = `data:image/jpeg;base64,${Buffer.from(buffer).toString('base64')}`;
-    }
-  } catch (err) {
-    console.warn('Avatar fetch skipped:', err.message);
-  }
-
-  // Best Time PBs
-  const timePBs = {};
-  [15, 30, 60, 120].forEach((sec) => {
-    const records = (userData.personalBests?.time?.[sec] || []);
-    if (records.length > 0) {
-      const best = [...records].sort((a, b) => b.wpm - a.wpm)[0];
-      timePBs[sec] = {
-        wpm: Math.round(best.wpm),
-        acc: Math.floor(best.acc)
-      };
-    } else {
-      timePBs[sec] = { wpm: '-', acc: '-' };
-    }
-  });
-
-  // Best Words PBs
-  const wordsPBs = {};
-  [10, 25, 50, 100].forEach((w) => {
-    const records = (userData.personalBests?.words?.[w] || []);
-    if (records.length > 0) {
-      const best = [...records].sort((a, b) => b.wpm - a.wpm)[0];
-      wordsPBs[w] = {
-        wpm: Math.round(best.wpm),
-        acc: Math.floor(best.acc)
-      };
-    } else {
-      wordsPBs[w] = { wpm: '-', acc: '-' };
-    }
-  });
-
-  const streak = userData.streak || 0;
-  const name = userData.name || username;
-
-  const svg = generate3CardSvg({
-    name,
-    streak,
-    avatarBase64,
-    timePBs,
-    wordsPBs,
-    theme
-  });
-
-  const outDir = path.resolve(process.argv[4] || '.');
+  const outDir = path.resolve(process.argv[2] || '.');
   if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, { recursive: true });
   }
 
-  const outFile = path.join(outDir, `${username}-monkeytype-readme.svg`);
-  fs.writeFileSync(outFile, svg, 'utf8');
-  const pbFile = path.join(outDir, `${username}-monkeytype-pb.svg`);
-  fs.writeFileSync(pbFile, svg, 'utf8');
-  console.log(`Saved SVG to ${outFile} and ${pbFile}`);
-}
+  // Default baseline stats
+  let stats = {
+    timeTyping: '54:07:32',
+    main: {
+      time: { wpm: 109, accuracy: 100 },
+      words: { wpm: 137, accuracy: 100 }
+    },
+    timeMode: [
+      { label: '15s', wpm: 109, accuracy: 100 },
+      { label: '30s', wpm: 95, accuracy: 98 },
+      { label: '60s', wpm: 85, accuracy: 96 },
+      { label: '120s', wpm: 75, accuracy: 92 }
+    ],
+    wordsMode: [
+      { label: '10', wpm: 137, accuracy: 100 },
+      { label: '25', wpm: 108, accuracy: 98 },
+      { label: '50', wpm: 89, accuracy: 96 },
+      { label: '100', wpm: 74, accuracy: 93 }
+    ]
+  };
 
-function generate3CardSvg({ name, streak, avatarBase64, timePBs, wordsPBs, theme }) {
-  const width = 500;
-  const height = 540;
-  const cardRadius = 18;
-  const cardHeight = 160;
+  // Fetch live stats from Monkeytype API
+  try {
+    const res = await fetch(`https://api.monkeytype.com/users/${USERNAME}/profile`);
+    if (res.ok) {
+      const json = await res.json();
+      const userData = json.data;
 
-  const avatarTag = avatarBase64
-    ? `<clipPath id="avatarClip">
-         <circle cx="70" cy="85" r="35" />
-       </clipPath>
-       <image href="${avatarBase64}" x="35" y="50" width="70" height="70" clip-path="url(#avatarClip)" />`
-    : `<circle cx="70" cy="85" r="35" fill="${theme.subColor}" />
-       <text x="70" y="93" fill="${theme.textColor}" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle">${name.charAt(0)}</text>`;
+      if (userData.typingStats?.timeTyping) {
+        stats.timeTyping = formatSecondsToHMS(userData.typingStats.timeTyping);
+      }
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">
-  <defs>
-    <style>
-      .mono { font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', 'Courier New', monospace; }
-      .bold { font-weight: 700; }
-      .semi { font-weight: 600; }
-      .regular { font-weight: 500; }
-    </style>
-  </defs>
+      // Time Mode PBs
+      const timeMode = [15, 30, 60, 120].map((sec) => {
+        const records = userData.personalBests?.time?.[sec] || [];
+        if (records.length > 0) {
+          const best = [...records].sort((a, b) => b.wpm - a.wpm)[0];
+          return {
+            label: `${sec}s`,
+            wpm: Math.round(best.wpm),
+            accuracy: Math.floor(best.acc)
+          };
+        }
+        return { label: `${sec}s`, wpm: '-', accuracy: '-' };
+      });
+      stats.timeMode = timeMode;
+      stats.main.time = { wpm: timeMode[0].wpm, accuracy: timeMode[0].accuracy };
 
-  <!-- Card 1: User Profile Header -->
-  <g transform="translate(0, 0)">
-    <rect width="${width}" height="${cardHeight}" rx="${cardRadius}" fill="${theme.cardBg}" />
-    ${avatarTag}
-    <text x="130" y="78" fill="${theme.textColor}" class="mono bold" font-size="28">${name}</text>
-    
-    <!-- Streak badge -->
-    <text x="130" y="105" fill="${theme.subColor}" class="mono regular" font-size="13">Current streak: ${streak} days</text>
-  </g>
+      // Words Mode PBs
+      const wordsMode = [10, 25, 50, 100].map((w) => {
+        const records = userData.personalBests?.words?.[w] || [];
+        if (records.length > 0) {
+          const best = [...records].sort((a, b) => b.wpm - a.wpm)[0];
+          return {
+            label: `${w}`,
+            wpm: Math.round(best.wpm),
+            accuracy: Math.floor(best.acc)
+          };
+        }
+        return { label: `${w}`, wpm: '-', accuracy: '-' };
+      });
+      stats.wordsMode = wordsMode;
+      stats.main.words = { wpm: wordsMode[0].wpm, accuracy: wordsMode[0].accuracy };
+      console.log('Successfully fetched live Monkeytype stats.');
+    }
+  } catch (err) {
+    console.warn('Could not fetch live Monkeytype API, using stored baseline stats:', err.message);
+  }
 
-  <!-- Card 2: Time Personal Bests -->
-  <g transform="translate(0, 180)">
-    <rect width="${width}" height="${cardHeight}" rx="${cardRadius}" fill="${theme.cardBg}" />
-    
-    <!-- 15s -->
-    <g transform="translate(62, 0)">
-      <text x="0" y="42" fill="${theme.subColor}" class="mono regular" font-size="13" text-anchor="middle">15 seconds</text>
-      <text x="0" y="92" fill="${theme.textColor}" class="mono bold" font-size="34" text-anchor="middle">${timePBs[15].wpm}</text>
-      <text x="0" y="128" fill="${theme.textColor}" class="mono semi" font-size="20" text-anchor="middle">${timePBs[15].acc}%</text>
-    </g>
+  const svgContent = createSVG(stats);
 
-    <!-- 30s -->
-    <g transform="translate(187, 0)">
-      <text x="0" y="42" fill="${theme.subColor}" class="mono regular" font-size="13" text-anchor="middle">30 seconds</text>
-      <text x="0" y="92" fill="${theme.textColor}" class="mono bold" font-size="34" text-anchor="middle">${timePBs[30].wpm}</text>
-      <text x="0" y="128" fill="${theme.textColor}" class="mono semi" font-size="20" text-anchor="middle">${timePBs[30].acc}%</text>
-    </g>
+  const filenames = [
+    'monkeytype-card-no-streak.svg',
+    `${USERNAME}-monkeytype-pb.svg`,
+    `${USERNAME}-monkeytype-readme.svg`
+  ];
 
-    <!-- 60s -->
-    <g transform="translate(312, 0)">
-      <text x="0" y="42" fill="${theme.subColor}" class="mono regular" font-size="13" text-anchor="middle">60 seconds</text>
-      <text x="0" y="92" fill="${theme.textColor}" class="mono bold" font-size="34" text-anchor="middle">${timePBs[60].wpm}</text>
-      <text x="0" y="128" fill="${theme.textColor}" class="mono semi" font-size="20" text-anchor="middle">${timePBs[60].acc}%</text>
-    </g>
-
-    <!-- 120s -->
-    <g transform="translate(437, 0)">
-      <text x="0" y="42" fill="${theme.subColor}" class="mono regular" font-size="13" text-anchor="middle">120 seconds</text>
-      <text x="0" y="92" fill="${theme.textColor}" class="mono bold" font-size="34" text-anchor="middle">${timePBs[120].wpm}</text>
-      <text x="0" y="128" fill="${theme.textColor}" class="mono semi" font-size="20" text-anchor="middle">${timePBs[120].acc}%</text>
-    </g>
-  </g>
-
-  <!-- Card 3: Words Personal Bests -->
-  <g transform="translate(0, 360)">
-    <rect width="${width}" height="${cardHeight}" rx="${cardRadius}" fill="${theme.cardBg}" />
-
-    <!-- 10 words -->
-    <g transform="translate(62, 0)">
-      <text x="0" y="42" fill="${theme.subColor}" class="mono regular" font-size="13" text-anchor="middle">10 words</text>
-      <text x="0" y="92" fill="${theme.textColor}" class="mono bold" font-size="34" text-anchor="middle">${wordsPBs[10].wpm}</text>
-      <text x="0" y="128" fill="${theme.textColor}" class="mono semi" font-size="20" text-anchor="middle">${wordsPBs[10].acc}%</text>
-    </g>
-
-    <!-- 25 words -->
-    <g transform="translate(187, 0)">
-      <text x="0" y="42" fill="${theme.subColor}" class="mono regular" font-size="13" text-anchor="middle">25 words</text>
-      <text x="0" y="92" fill="${theme.textColor}" class="mono bold" font-size="34" text-anchor="middle">${wordsPBs[25].wpm}</text>
-      <text x="0" y="128" fill="${theme.textColor}" class="mono semi" font-size="20" text-anchor="middle">${wordsPBs[25].acc}%</text>
-    </g>
-
-    <!-- 50 words -->
-    <g transform="translate(312, 0)">
-      <text x="0" y="42" fill="${theme.subColor}" class="mono regular" font-size="13" text-anchor="middle">50 words</text>
-      <text x="0" y="92" fill="${theme.textColor}" class="mono bold" font-size="34" text-anchor="middle">${wordsPBs[50].wpm}</text>
-      <text x="0" y="128" fill="${theme.textColor}" class="mono semi" font-size="20" text-anchor="middle">${wordsPBs[50].acc}%</text>
-    </g>
-
-    <!-- 100 words -->
-    <g transform="translate(437, 0)">
-      <text x="0" y="42" fill="${theme.subColor}" class="mono regular" font-size="13" text-anchor="middle">100 words</text>
-      <text x="0" y="92" fill="${theme.textColor}" class="mono bold" font-size="34" text-anchor="middle">${wordsPBs[100].wpm}</text>
-      <text x="0" y="128" fill="${theme.textColor}" class="mono semi" font-size="20" text-anchor="middle">${wordsPBs[100].acc}%</text>
-    </g>
-  </g>
-</svg>`;
+  filenames.forEach((filename) => {
+    const target = path.join(outDir, filename);
+    fs.writeFileSync(target, svgContent, 'utf8');
+    console.log(`Saved: ${target}`);
+  });
 }
 
 main().catch((err) => {

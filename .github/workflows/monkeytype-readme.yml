@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: "20.x"
 
-      - name: Generate 3-Card Personal Bests SVG
+      - name: Generate Custom Monkeytype SVG
         run: |
-          node .github/scripts/generate-monkeytype.js Kalidaskj botanical monkeytype-readme-svg
+          node .github/scripts/generate-monkeytype.js monkeytype-readme-svg
 
       - name: Push to monkeytype-readme branch
         uses: crazy-max/ghaction-github-pages@v4
