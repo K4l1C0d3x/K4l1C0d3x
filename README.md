@@ -42,7 +42,8 @@
 <h2> <img src="imgs/typing.png" width="18"/> <em> Typing Stats </em> </h2>
 
 <p>
-  <a href="https://monkeytype.com/profile/Kalidaskj"  /> monkeytype
+  <a href="https://monkeytype.com/profile/Kalidaskj" target="_blank">
+    <img src="https://raw.githubusercontent.com/K4l1C0d3x/K4l1C0d3x/monkeytype-readme/Kalidaskj-monkeytype-readme.svg" alt="Monkeytype Stats" />
   </a>
 </p>
 
