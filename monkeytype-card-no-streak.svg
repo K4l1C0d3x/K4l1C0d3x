@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="840"
+     height="280"
+     viewBox="0 0 840 280">
+
+  <style>
+    text {
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .rank-circle-bg { stroke: #303342; }
+    .rank-circle { stroke: #c39bff; stroke-dasharray: 251.3; stroke-dashoffset: 91.6; stroke-linecap: round; }
+  </style>
+
+  <!-- MAIN CARD -->
+  <rect x="8" y="8"
+        width="824" height="264"
+        rx="14"
+        fill="#262833"
+        stroke="#414354"/>
+
+  <!-- HEADER -->
+  <text x="26" y="34"
+        fill="#a78bfa"
+        font-size="14">⌨ monkeytype</text>
+
+  <path d="M26 43 H814"
+        stroke="#414354"/>
+
+  <!-- ================= COLUMN 1: USER & ACTIVITY ================= -->
+  <!-- USERNAME -->
+  <text x="26" y="86"
+        fill="#c39bff"
+        font-size="25"
+        font-weight="bold">Kalidaskj</text>
+
+  <!-- TYPING TIME -->
+  <text x="26" y="126"
+        fill="#9299ad"
+        font-size="9"
+        letter-spacing="1">TIME TYPING</text>
+
+  <text x="26" y="151"
+        fill="#eeeeee"
+        font-size="16"
+        font-weight="bold">54:08:02</text>
+
+  <!-- TESTS COMPLETED -->
+  <text x="26" y="196"
+        fill="#9299ad"
+        font-size="9"
+        letter-spacing="1">TESTS COMPLETED</text>
+
+  <text x="26" y="221"
+        fill="#eeeeee"
+        font-size="16"
+        font-weight="bold">9,086</text>
+
+  <text x="26" y="247"
+        fill="#9299ad"
+        font-size="9">STARTED: <tspan fill="#c39bff" font-weight="bold">24,852</tspan>  •  XP: <tspan fill="#c39bff" font-weight="bold">9,33,117</tspan></text>
+
+  <!-- DIVIDER 1 -->
+  <path d="M255 54 V254"
+        stroke="#414354"/>
+
+  <!-- ================= COLUMN 2: TIME MODE ================= -->
+  <!-- MAIN TIME STAT (15s) -->
+  <text x="278" y="68"
+        fill="#9299ad"
+        font-size="9"
+        letter-spacing="1">15 SECONDS</text>
+
+  <text x="278" y="112"
+        fill="#c39bff"
+        font-size="34"
+        font-weight="bold">109</text>
+
+  <text x="278" y="126"
+        fill="#9299ad"
+        font-size="9">WPM</text>
+
+  <text x="278" y="151"
+        fill="#eeeeee"
+        font-size="15"
+        font-weight="bold">100%</text>
+
+  <!-- MAIN WORD STAT (10w) -->
+  <text x="410" y="68"
+        fill="#9299ad"
+        font-size="9"
+        letter-spacing="1">10 WORDS</text>
+
+  <text x="410" y="112"
+        fill="#c39bff"
+        font-size="34"
+        font-weight="bold">137</text>
+
+  <text x="410" y="126"
+        fill="#9299ad"
+        font-size="9">WPM</text>
+
+  <text x="410" y="151"
+        fill="#eeeeee"
+        font-size="15"
+        font-weight="bold">100%</text>
+
+  <!-- TIME MODE BOX -->
+  
+    <rect x="270" y="165"
+          width="260" height="92"
+          rx="10" fill="#303342"/>
+
+    <text x="282" y="184"
+          fill="#9299ad"
+          font-size="9"
+          font-weight="bold">TIME MODE</text>
+
+    
+        <text x="311.5" y="204"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">15s</text>
+
+        <text x="311.5" y="228"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">109</text>
+
+        <text x="311.5" y="245"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">100%</text>
+      
+        <text x="370.5" y="204"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">30s</text>
+
+        <text x="370.5" y="228"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">95</text>
+
+        <text x="370.5" y="245"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">98%</text>
+      
+        <text x="429.5" y="204"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">60s</text>
+
+        <text x="429.5" y="228"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">85</text>
+
+        <text x="429.5" y="245"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">96%</text>
+      
+        <text x="488.5" y="204"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">120s</text>
+
+        <text x="488.5" y="228"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">75</text>
+
+        <text x="488.5" y="245"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">92%</text>
+      
+  
+
+  <!-- DIVIDER 2 -->
+  <path d="M545 54 V254"
+        stroke="#414354"/>
+
+  <!-- ================= COLUMN 3: WORDS MODE & LEADERBOARD ================= -->
+  <!-- LEADERBOARD RANK -->
+  <g transform="translate(565, 58)">
+    <!-- Rank Ring -->
+    <circle class="rank-circle-bg" cx="42" cy="45" r="38" fill="none" stroke-width="6" />
+    <circle class="rank-circle" cx="42" cy="45" r="38" fill="none" stroke-width="6" transform="rotate(-90 42 45)" />
+    <text x="42" y="42" class="circle-subtitle" fill="#9299ad" font-size="10" font-weight="bold" text-anchor="middle">Top</text>
+    <text x="42" y="56" class="circle-title" fill="#c39bff" font-size="13" font-weight="bold" text-anchor="middle">36.5%</text>
+
+    <!-- Leaderboard Ranks Text -->
+    <text x="96" y="24" fill="#9299ad" font-size="9" letter-spacing="1">GLOBAL RANKING</text>
+    <text x="96" y="46" fill="#9299ad" font-size="10">15s Rank: <tspan fill="#eeeeee" font-weight="bold">#1,96,936</tspan></text>
+    <text x="96" y="68" fill="#9299ad" font-size="10">60s Rank: <tspan fill="#eeeeee" font-weight="bold">#1,94,249</tspan></text>
+    <text x="96" y="88" fill="#c39bff" font-size="10" font-weight="bold">MK1300 V2</text>
+  </g>
+
+  <!-- WORDS MODE BOX -->
+  
+    <rect x="560" y="165"
+          width="260" height="92"
+          rx="10" fill="#303342"/>
+
+    <text x="572" y="184"
+          fill="#9299ad"
+          font-size="9"
+          font-weight="bold">WORDS MODE</text>
+
+    
+        <text x="601.5" y="204"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">10</text>
+
+        <text x="601.5" y="228"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">137</text>
+
+        <text x="601.5" y="245"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">100%</text>
+      
+        <text x="660.5" y="204"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">25</text>
+
+        <text x="660.5" y="228"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">108</text>
+
+        <text x="660.5" y="245"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">98%</text>
+      
+        <text x="719.5" y="204"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">50</text>
+
+        <text x="719.5" y="228"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">89</text>
+
+        <text x="719.5" y="245"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">96%</text>
+      
+        <text x="778.5" y="204"
+              text-anchor="middle"
+              fill="#9299ad"
+              font-size="9">100</text>
+
+        <text x="778.5" y="228"
+              text-anchor="middle"
+              fill="#eeeeee"
+              font-size="16"
+              font-weight="bold">74</text>
+
+        <text x="778.5" y="245"
+              text-anchor="middle"
+              fill="#c39bff"
+              font-size="9"
+              font-weight="bold">93%</text>
+      
+  
+
+</svg>
