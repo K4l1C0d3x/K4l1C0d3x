@@ -3,6 +3,13 @@ const path = require('path');
 
 const USERNAME = 'Kalidaskj';
 
+let montserratB64 = '';
+try {
+  montserratB64 = require('./montserrat-base64.js');
+} catch (e) {
+  // fallback if file not found
+}
+
 function formatSecondsToHMS(totalSeconds) {
   const sec = Math.floor(totalSeconds || 0);
   const hours = Math.floor(sec / 3600);
@@ -48,7 +55,7 @@ function generateStatsBox(items, title, x, y, width = 390, height = 90) {
         <text x="${cx}" y="${y + 64}"
               text-anchor="middle"
               fill="#eeeeee"
-              font-size="18"
+              font-size="19"
               font-weight="900">${item.wpm}</text>
 
         <text x="${cx}" y="${y + 81}"
@@ -66,15 +73,26 @@ function createExpandedSVG(stats) {
   const width = 840;
   const height = 280;
 
+  const fontFaceStyle = montserratB64
+    ? `@font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700 900;
+      font-display: swap;
+      src: url('data:font/woff2;base64,${montserratB64}') format('woff2');
+    }`
+    : `@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');`;
+
   return `<svg xmlns="http://www.w3.org/2000/svg"
      width="${width}"
      height="${height}"
      viewBox="0 0 ${width} ${height}">
 
   <style>
+    ${fontFaceStyle}
     text {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Montserrat', Helvetica, Arial, sans-serif;
-      font-weight: 700;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
     }
   </style>
 
@@ -105,25 +123,25 @@ function createExpandedSVG(stats) {
   <text x="30" y="128"
         fill="#9299ad"
         font-size="10"
-        font-weight="700"
+        font-weight="800"
         letter-spacing="1">TIME TYPING</text>
 
   <text x="30" y="153"
         fill="#eeeeee"
         font-size="18"
-        font-weight="800">${escapeXML(stats.timeTyping)}</text>
+        font-weight="900">${escapeXML(stats.timeTyping)}</text>
 
   <!-- TESTS COMPLETED -->
   <text x="220" y="128"
         fill="#9299ad"
         font-size="10"
-        font-weight="700"
+        font-weight="800"
         letter-spacing="1">TESTS COMPLETED</text>
 
   <text x="220" y="153"
         fill="#eeeeee"
         font-size="18"
-        font-weight="800">${stats.completedTests.toLocaleString()}</text>
+        font-weight="900">${stats.completedTests.toLocaleString()}</text>
 
   <!-- DIVIDER -->
   <path d="M420 54 V160"
@@ -134,12 +152,12 @@ function createExpandedSVG(stats) {
   <text x="450" y="68"
         fill="#9299ad"
         font-size="10"
-        font-weight="700"
+        font-weight="800"
         letter-spacing="1">15 SECONDS</text>
 
   <text x="450" y="112"
         fill="#c39bff"
-        font-size="38"
+        font-size="40"
         font-weight="900">${stats.main.time.wpm}</text>
 
   <text x="450" y="127"
@@ -156,12 +174,12 @@ function createExpandedSVG(stats) {
   <text x="650" y="68"
         fill="#9299ad"
         font-size="10"
-        font-weight="700"
+        font-weight="800"
         letter-spacing="1">10 WORDS</text>
 
   <text x="650" y="112"
         fill="#c39bff"
-        font-size="38"
+        font-size="40"
         font-weight="900">${stats.main.words.wpm}</text>
 
   <text x="650" y="127"
@@ -193,7 +211,7 @@ async function main() {
   // Default baseline stats
   let stats = {
     timeTyping: '54:08:02',
-    completedTests: 9084,
+    completedTests: 9086,
     startedTests: 24850,
     xp: 933059,
     main: {
