@@ -17,7 +17,7 @@
 
 <h2> <img src="imgs/aboutme.png" width="25"/> <em>About  me </em></h2>
 
-<img src="gifs/code.gif" width="250" align="right" style="margin-left: 20px;" />
+
 <br/>
 
 <p>
