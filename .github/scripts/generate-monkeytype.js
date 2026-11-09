@@ -3,9 +3,9 @@ const path = require('path');
 
 const USERNAME = 'Kalidaskj';
 
-let poppins = null;
+let montserratB64 = '';
 try {
-  poppins = require('./poppins-base64.js');
+  montserratB64 = require('./montserrat-base64.js');
 } catch (e) {
   // fallback if file not found
 }
@@ -73,22 +73,15 @@ function createExpandedSVG(stats) {
   const width = 840;
   const height = 280;
 
-  const fontFaceStyle = poppins
+  const fontFaceStyle = montserratB64
     ? `@font-face {
-      font-family: 'Poppins';
+      font-family: 'Montserrat';
       font-style: normal;
-      font-weight: 700 800;
+      font-weight: 700 900;
       font-display: swap;
-      src: url('data:font/woff2;base64,${poppins.w800}') format('woff2');
-    }
-    @font-face {
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url('data:font/woff2;base64,${poppins.w900}') format('woff2');
+      src: url('data:font/woff2;base64,${montserratB64}') format('woff2');
     }`
-    : `@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap');`;
+    : `@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg"
      width="${width}"
@@ -98,7 +91,7 @@ function createExpandedSVG(stats) {
   <style>
     ${fontFaceStyle}
     text {
-      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-weight: 800;
     }
   </style>

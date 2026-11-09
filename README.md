@@ -43,7 +43,7 @@
 
 <p>
   <a href="https://monkeytype.com/profile/Kalidaskj" target="_blank">
-    <img width="100%" src="https://raw.githubusercontent.com/K4l1C0d3x/K4l1C0d3x/monkeytype-readme/monkeytype-card-no-streak.svg?v=8" alt="Monkeytype Stats" />
+    <img width="100%" src="https://raw.githubusercontent.com/K4l1C0d3x/K4l1C0d3x/monkeytype-readme/monkeytype-card-no-streak.svg?v=9" alt="Monkeytype Stats" />
   </a>
 </p>
 
